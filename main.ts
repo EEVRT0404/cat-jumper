@@ -18,6 +18,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile3`, function (sprite, loc
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`tile2`, function (sprite, location) {
     current_level += 1
+    info.changeLifeBy(1)
     startLevel()
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Flower, function (sprite, otherSprite) {
@@ -57,7 +58,6 @@ function startLevel () {
         tiles.setTileAt(value, assets.tile`tile0`)
     }
     scene.cameraFollowSprite(Hops_and_Paw)
-    info.setLife(5)
     for (let value2 of sprites.allOfKind(SpriteKind.Enemy)) {
         value2.destroy()
     }
@@ -297,6 +297,7 @@ Hops_and_Paw = sprites.create(img`
     . . . . f . f . . . f . f . . . 
     `, SpriteKind.Player)
 controller.moveSprite(Hops_and_Paw, 80, 0)
+info.setLife(3)
 startLevel()
 game.onUpdate(function () {
     if (Hops_and_Paw.vy < 0) {
