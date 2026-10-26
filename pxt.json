@@ -1,6 +1,6 @@
 {
-    "name": "cat jumper",
-    "description": "",
+    "name": "cat jumper game",
+    "description": "一款可以控制黑貓的「貓咪跳躍闖關遊戲」，本遊戲有主角黑貓，使用虛擬搖桿或wasd遊戲；碰到花出現討人厭的蜜蜂，會自動追著貓咪；可以加分數的錢錢；上下飄的火焰，碰到可是會扣兩顆心心的!",
     "dependencies": {
         "device": "*",
         "animation": "*"
@@ -23,5 +23,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
